@@ -112,6 +112,8 @@ void update_title(void)
 	size_t doctitle_len;
 	if (doctitle)
 		doctitle_len = strlen(doctitle);
+	else
+		doctitle_len = 0;
 	title = malloc(docname_len + sizeof(title_suffix) + modified + (doctitle ? doctitle_len + 2 : 0));
 	size_t i = 0;
 	if (modified)
@@ -119,7 +121,7 @@ void update_title(void)
 		title[i] = '*';
 		i++;
 	}
-	if (doctitle)
+	if (doctitle_len)
 	{
 		memcpy(title + i, doctitle, doctitle_len);
 		i += doctitle_len;
@@ -128,7 +130,7 @@ void update_title(void)
 	}
 	memcpy(title + i, docname, docname_len);
 	i += docname_len;
-	if (doctitle)
+	if (doctitle_len)
 	{
 		title[i] = ')';
 		i++;
