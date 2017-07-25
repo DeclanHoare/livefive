@@ -114,7 +114,7 @@ void update_title(void)
 		doctitle_len = strlen(doctitle);
 	else
 		doctitle_len = 0;
-	title = malloc(docname_len + sizeof(title_suffix) + modified + (doctitle ? doctitle_len + 2 : 0));
+	title = malloc(docname_len + sizeof(title_suffix) + modified + (doctitle_len ? doctitle_len + 2 : 0));
 	size_t i = 0;
 	if (modified)
 	{
