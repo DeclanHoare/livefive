@@ -362,6 +362,7 @@ int main(int argc, char** argv)
 {
 	gtk_init(&argc, &argv);
 	main_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+	gtk_window_set_default_size(GTK_WINDOW(main_window), 800, 600);
 	
 	GtkWidget* vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 	gtk_container_add(GTK_CONTAINER(main_window), vbox);
