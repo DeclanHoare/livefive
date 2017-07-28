@@ -15,7 +15,7 @@
 	You should have received a copy of the GNU General Public License
 	along with LiveFive.  If not, see <http://www.gnu.org/licenses/>.
 
-	livefive.c - the compiler
+	livefive.c - the editor
 */
 
 #include <stdbool.h>
